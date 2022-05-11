@@ -1,0 +1,16 @@
+@font-face {
+  font-family: IranSansWeb;
+  src: url(./Assets//Fonts//IRANSans-web.ttf);
+}
+
+body {
+  font-family: IranSansWeb;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,0 +1,21 @@
+{
+    "short_name": "PWA blogify",
+    "name": "blogify App Sample",
+    "icons": [
+     
+      {
+        "src": "https://blog.faradars.org/wp-content/uploads/2020/07/Blogfa.jpg",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "https://blog.faradars.org/wp-content/uploads/2020/07/Blogfa.jpg",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "./index.html?utm_source=homescreen",
+    "display": "standalone",
+    "theme_color": "yellow",
+    "background_color": "blue"
+  }
