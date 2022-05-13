@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
@@ -23,14 +23,14 @@ var _User = _interopRequireDefault(require("../models/User"));
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-var router = _express.default.Router();
+var router = _express["default"].Router();
 
 router.post("/write", /*#__PURE__*/function () {
-  var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(req, res, next) {
+  var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(req, res, next) {
     var thisUser, thisBlog;
-    return _regenerator.default.wrap(function _callee$(_context) {
+    return _regenerator["default"].wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
@@ -47,7 +47,7 @@ router.post("/write", /*#__PURE__*/function () {
 
           case 3:
             _context.next = 5;
-            return (0, _auth.default)(req.user);
+            return (0, _auth["default"])(req.user);
 
           case 5:
             thisUser = _context.sent;
@@ -61,7 +61,7 @@ router.post("/write", /*#__PURE__*/function () {
 
           case 8:
             _context.next = 10;
-            return _Blog.default.create(_objectSpread(_objectSpread({}, req.body), {}, {
+            return _Blog["default"].create(_objectSpread(_objectSpread({}, req.body), {}, {
               creatorId: thisUser._id
             }));
 
@@ -94,14 +94,14 @@ router.post("/write", /*#__PURE__*/function () {
   };
 }());
 router.get("/", /*#__PURE__*/function () {
-  var _ref2 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2(req, res) {
+  var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(req, res) {
     var users, obj, blogs;
-    return _regenerator.default.wrap(function _callee2$(_context2) {
+    return _regenerator["default"].wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
             _context2.next = 2;
-            return _User.default.findAll();
+            return _User["default"].findAll();
 
           case 2:
             users = _context2.sent;
@@ -110,7 +110,7 @@ router.get("/", /*#__PURE__*/function () {
               return obj[user._id] = user;
             });
             _context2.next = 7;
-            return _Blog.default.findAll();
+            return _Blog["default"].findAll();
 
           case 7:
             blogs = _context2.sent;
@@ -132,14 +132,14 @@ router.get("/", /*#__PURE__*/function () {
   };
 }());
 router.get("/:_id", /*#__PURE__*/function () {
-  var _ref3 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3(req, res, next) {
+  var _ref3 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(req, res, next) {
     var thisBlog, thisUser;
-    return _regenerator.default.wrap(function _callee3$(_context3) {
+    return _regenerator["default"].wrap(function _callee3$(_context3) {
       while (1) {
         switch (_context3.prev = _context3.next) {
           case 0:
             _context3.next = 2;
-            return _Blog.default.findById(req.params._id);
+            return _Blog["default"].findById(req.params._id);
 
           case 2:
             thisBlog = _context3.sent;
@@ -155,7 +155,7 @@ router.get("/:_id", /*#__PURE__*/function () {
 
           case 5:
             _context3.next = 7;
-            return _User.default.findById(thisBlog.creatorId);
+            return _User["default"].findById(thisBlog.creatorId);
 
           case 7:
             thisUser = _context3.sent;
@@ -175,9 +175,9 @@ router.get("/:_id", /*#__PURE__*/function () {
   };
 }());
 router.post("/my-blogs", /*#__PURE__*/function () {
-  var _ref4 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee4(req, res, next) {
+  var _ref4 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee4(req, res, next) {
     var thisUser;
-    return _regenerator.default.wrap(function _callee4$(_context4) {
+    return _regenerator["default"].wrap(function _callee4$(_context4) {
       while (1) {
         switch (_context4.prev = _context4.next) {
           case 0:
@@ -185,7 +185,7 @@ router.post("/my-blogs", /*#__PURE__*/function () {
             _context4.prev = 1;
             console.log("req.user", req.user);
             _context4.next = 5;
-            return (0, _auth.default)(req.user);
+            return (0, _auth["default"])(req.user);
 
           case 5:
             thisUser = _context4.sent;
@@ -201,7 +201,7 @@ router.post("/my-blogs", /*#__PURE__*/function () {
           case 9:
             _context4.t0 = res;
             _context4.next = 12;
-            return _Blog.default.getBlogsByUserID(thisUser._id);
+            return _Blog["default"].getBlogsByUserID(thisUser._id);
 
           case 12:
             _context4.t1 = _context4.sent;
@@ -227,15 +227,15 @@ router.post("/my-blogs", /*#__PURE__*/function () {
   };
 }());
 router.post("/by-user", /*#__PURE__*/function () {
-  var _ref5 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee5(req, res, next) {
+  var _ref5 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee5(req, res, next) {
     var thisUser;
-    return _regenerator.default.wrap(function _callee5$(_context5) {
+    return _regenerator["default"].wrap(function _callee5$(_context5) {
       while (1) {
         switch (_context5.prev = _context5.next) {
           case 0:
             _context5.prev = 0;
             _context5.next = 3;
-            return _User.default.findById(req.body._id);
+            return _User["default"].findById(req.body._id);
 
           case 3:
             thisUser = _context5.sent;
@@ -278,9 +278,9 @@ router.post("/by-user", /*#__PURE__*/function () {
   };
 }());
 router.post("/edit", /*#__PURE__*/function () {
-  var _ref6 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee6(req, res, next) {
+  var _ref6 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee6(req, res, next) {
     var realData, thisUser, thisBlog;
-    return _regenerator.default.wrap(function _callee6$(_context6) {
+    return _regenerator["default"].wrap(function _callee6$(_context6) {
       while (1) {
         switch (_context6.prev = _context6.next) {
           case 0:
@@ -300,12 +300,12 @@ router.post("/edit", /*#__PURE__*/function () {
               imgurl: req.body.data.imgurl
             };
             _context6.next = 6;
-            return (0, _auth.default)(req.user);
+            return (0, _auth["default"])(req.user);
 
           case 6:
             thisUser = _context6.sent;
             _context6.next = 9;
-            return _Blog.default.findById(req.body.blogId);
+            return _Blog["default"].findById(req.body.blogId);
 
           case 9:
             thisBlog = _context6.sent;
@@ -319,7 +319,7 @@ router.post("/edit", /*#__PURE__*/function () {
 
           case 12:
             _context6.next = 14;
-            return _Blog.default.findByIdAndUpdate(thisBlog._id, realData);
+            return _Blog["default"].findByIdAndUpdate(thisBlog._id, realData);
 
           case 14:
             return _context6.abrupt("return", res.status(200).json({
@@ -346,4 +346,4 @@ router.post("/edit", /*#__PURE__*/function () {
   };
 }());
 var _default = router;
-exports.default = _default;
+exports["default"] = _default;

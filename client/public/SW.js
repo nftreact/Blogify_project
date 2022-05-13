@@ -16,15 +16,18 @@ self.addEventListener("install", function (event) {
         "/copySlick.css",
         "/copythemSlick.css",
         "/index.css",
-        "/Manifest.json"
+        "/Manifest.json",
       ]);
     })
   );
 });
 //Listen for requests
 self.addEventListener("fetch", (event) => {
-  console.log("Fetch event for ", event.request.url);
-  if (!(event.request.url.indexOf('http') === 0)) return; // skip the request. if request is not made with http protocol
+  console.log(
+    "Fetch event for sssssssssssssssssssssssssssssssssssssssssssssssssssssssss ",
+    event.request.url
+  );
+  if (!(event.request.url.indexOf("http") === 0)) return; // skip the request. if request is not made with http protocol
 
   event.respondWith(
     caches
@@ -42,7 +45,7 @@ self.addEventListener("fetch", (event) => {
           });
         });
       })
-      .catch((error) => { })
+      .catch((error) => {})
   );
 });
 

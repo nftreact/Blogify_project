@@ -26,9 +26,9 @@ function decodeToken(_x) {
 }
 
 function _decodeToken() {
-  _decodeToken = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2(token) {
+  _decodeToken = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(token) {
     var arr;
-    return _regenerator.default.wrap(function _callee2$(_context2) {
+    return _regenerator["default"].wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
@@ -40,7 +40,7 @@ function _decodeToken() {
               break;
             }
 
-            return _context2.abrupt("return", _jsonwebtoken.default.verify(arr[1], 'SECRET'));
+            return _context2.abrupt("return", _jsonwebtoken["default"].verify(arr[1], 'SECRET'));
 
           case 4:
             throw new Error('Please Re-Sign In');
@@ -60,16 +60,16 @@ function _decodeToken() {
   return _decodeToken.apply(this, arguments);
 }
 
-var app = (0, _express.default)();
-app.use((0, _cors.default)());
-app.use(_express.default.json());
-app.use(_express.default.urlencoded({
+var app = (0, _express["default"])();
+app.use((0, _cors["default"])());
+app.use(_express["default"].json());
+app.use(_express["default"].urlencoded({
   extended: true
 }));
 app.use( /*#__PURE__*/function () {
-  var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(req, res, next) {
+  var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(req, res, next) {
     var token, user;
-    return _regenerator.default.wrap(function _callee$(_context) {
+    return _regenerator["default"].wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
@@ -119,8 +119,8 @@ app.use(function (req, res, next) {
   console.log();
   next();
 });
-(0, _middlewares.default)(app);
-(0, _router.default)(app);
+(0, _middlewares["default"])(app);
+(0, _router["default"])(app);
 app.listen(4000, function () {
   return console.log("app is ready on port 4000");
 });

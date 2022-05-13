@@ -1,6 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom";
 import Login from './pages/Login'
-import Dashbord from './pages/Dashbord'
+import DashbordLayot from './pages/DashbordLayot'
 import BlogHome from './pages/BlogHome'
 import Home from './pages/Home'
 import React from 'react'
@@ -15,7 +15,7 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="login" element={<Login />} />
       <Route path="dashbord" element={<Layot />}>
-        <Route path="/dashbord/home" element={<Dashbord />} />
+        <Route path="/dashbord/home" element={<DashbordLayot />} />
         <Route path="/dashbord/home/blog/:id" element={<Blog />} />
         <Route path="/dashbord/home/editblog/:id" element={<EditBlog />} />
       </Route>

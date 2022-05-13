@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
@@ -17,12 +17,12 @@ var _User = _interopRequireDefault(require("../models/User"));
 
 var _auth = _interopRequireDefault(require("../lib/auth"));
 
-var router = _express.default.Router();
+var router = _express["default"].Router();
 
 router.post('/signup', /*#__PURE__*/function () {
-  var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(req, res) {
+  var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(req, res) {
     var token;
-    return _regenerator.default.wrap(function _callee$(_context) {
+    return _regenerator["default"].wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
@@ -41,7 +41,7 @@ router.post('/signup', /*#__PURE__*/function () {
 
           case 5:
             _context.next = 7;
-            return _User.default.signup({
+            return _User["default"].signup({
               username: req.body.username,
               name: req.body.name,
               imgurl: req.body.imgurl
@@ -84,14 +84,14 @@ router.post('/signup', /*#__PURE__*/function () {
   };
 }());
 router.get('/', /*#__PURE__*/function () {
-  var _ref2 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2(req, res) {
-    return _regenerator.default.wrap(function _callee2$(_context2) {
+  var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(req, res) {
+    return _regenerator["default"].wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
             _context2.t0 = res.status(200);
             _context2.next = 3;
-            return _User.default.findAll();
+            return _User["default"].findAll();
 
           case 3:
             _context2.t1 = _context2.sent;
@@ -110,9 +110,9 @@ router.get('/', /*#__PURE__*/function () {
   };
 }());
 router.post('/login', /*#__PURE__*/function () {
-  var _ref3 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3(req, res) {
+  var _ref3 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(req, res) {
     var token;
-    return _regenerator.default.wrap(function _callee3$(_context3) {
+    return _regenerator["default"].wrap(function _callee3$(_context3) {
       while (1) {
         switch (_context3.prev = _context3.next) {
           case 0:
@@ -129,7 +129,7 @@ router.post('/login', /*#__PURE__*/function () {
 
           case 3:
             _context3.next = 5;
-            return _User.default.login({
+            return _User["default"].login({
               username: req.body.username,
               password: req.body.password
             });
@@ -160,15 +160,15 @@ router.post('/login', /*#__PURE__*/function () {
   };
 }());
 router.post('/me', /*#__PURE__*/function () {
-  var _ref4 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee4(req, res, next) {
+  var _ref4 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee4(req, res, next) {
     var user;
-    return _regenerator.default.wrap(function _callee4$(_context4) {
+    return _regenerator["default"].wrap(function _callee4$(_context4) {
       while (1) {
         switch (_context4.prev = _context4.next) {
           case 0:
             _context4.prev = 0;
             _context4.next = 3;
-            return (0, _auth.default)(req.user);
+            return (0, _auth["default"])(req.user);
 
           case 3:
             user = _context4.sent;
@@ -203,15 +203,15 @@ router.post('/me', /*#__PURE__*/function () {
   };
 }());
 router.post('/edit', /*#__PURE__*/function () {
-  var _ref5 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee5(req, res, next) {
+  var _ref5 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee5(req, res, next) {
     var thisUser, realData;
-    return _regenerator.default.wrap(function _callee5$(_context5) {
+    return _regenerator["default"].wrap(function _callee5$(_context5) {
       while (1) {
         switch (_context5.prev = _context5.next) {
           case 0:
             _context5.prev = 0;
             _context5.next = 3;
-            return (0, _auth.default)(req.user);
+            return (0, _auth["default"])(req.user);
 
           case 3:
             thisUser = _context5.sent;
@@ -238,7 +238,7 @@ router.post('/edit', /*#__PURE__*/function () {
               imgurl: req.body.data.imgurl
             };
             _context5.next = 11;
-            return _User.default.findByIdAndUpdate(thisUser._id, realData);
+            return _User["default"].findByIdAndUpdate(thisUser._id, realData);
 
           case 11:
             return _context5.abrupt("return", res.status(200).json({
@@ -265,4 +265,4 @@ router.post('/edit', /*#__PURE__*/function () {
   };
 }());
 var _default = router;
-exports.default = _default;
+exports["default"] = _default;

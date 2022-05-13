@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
@@ -23,19 +23,19 @@ var _path = _interopRequireDefault(require("path"));
 
 var _lib = require("../lib");
 
-var blogDirectoy = _path.default.join(process.cwd(), '/src/db/blog.txt');
+var blogDirectoy = _path["default"].join(process.cwd(), '/src/db/blog.txt');
 
 var BlogSchema = /*#__PURE__*/function () {
   function BlogSchema() {
-    (0, _classCallCheck2.default)(this, BlogSchema);
+    (0, _classCallCheck2["default"])(this, BlogSchema);
   }
 
-  (0, _createClass2.default)(BlogSchema, [{
+  (0, _createClass2["default"])(BlogSchema, [{
     key: "create",
     value: function () {
-      var _create = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(_ref) {
+      var _create = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(_ref) {
         var title, content, creatorId, imgurl, data, str;
-        return _regenerator.default.wrap(function _callee$(_context) {
+        return _regenerator["default"].wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
@@ -92,9 +92,9 @@ var BlogSchema = /*#__PURE__*/function () {
   }, {
     key: "findAll",
     value: function () {
-      var _findAll = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+      var _findAll = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2() {
         var x, y;
-        return _regenerator.default.wrap(function _callee2$(_context2) {
+        return _regenerator["default"].wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
@@ -125,8 +125,8 @@ var BlogSchema = /*#__PURE__*/function () {
   }, {
     key: "findById",
     value: function () {
-      var _findById = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3(_id) {
-        return _regenerator.default.wrap(function _callee3$(_context3) {
+      var _findById = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(_id) {
+        return _regenerator["default"].wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
@@ -161,8 +161,8 @@ var BlogSchema = /*#__PURE__*/function () {
   }, {
     key: "getBlogsByUserID",
     value: function () {
-      var _getBlogsByUserID = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee4(_id) {
-        return _regenerator.default.wrap(function _callee4$(_context4) {
+      var _getBlogsByUserID = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee4(_id) {
+        return _regenerator["default"].wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
               case 0:
@@ -199,9 +199,9 @@ var BlogSchema = /*#__PURE__*/function () {
   }, {
     key: "findByIdAndUpdate",
     value: function () {
-      var _findByIdAndUpdate = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee5(_id, data) {
+      var _findByIdAndUpdate = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee5(_id, data) {
         var all, p, s;
-        return _regenerator.default.wrap(function _callee5$(_context5) {
+        return _regenerator["default"].wrap(function _callee5$(_context5) {
           while (1) {
             switch (_context5.prev = _context5.next) {
               case 0:
@@ -224,7 +224,7 @@ var BlogSchema = /*#__PURE__*/function () {
 
               case 7:
                 Object.entries(data).forEach(function (_ref3) {
-                  var _ref4 = (0, _slicedToArray2.default)(_ref3, 2),
+                  var _ref4 = (0, _slicedToArray2["default"])(_ref3, 2),
                       key = _ref4[0],
                       value = _ref4[1];
 
@@ -260,4 +260,4 @@ var BlogSchema = /*#__PURE__*/function () {
 
 var Blog = new BlogSchema();
 var _default = Blog;
-exports.default = _default;
+exports["default"] = _default;

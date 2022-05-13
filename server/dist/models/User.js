@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
@@ -27,21 +27,21 @@ var _dotenv = _interopRequireDefault(require("dotenv"));
 
 var _jsonwebtoken = _interopRequireDefault(require("jsonwebtoken"));
 
-_dotenv.default.config();
+_dotenv["default"].config();
 
-var userDirectory = _path.default.join(process.cwd(), '/src/db/user.txt');
+var userDirectory = _path["default"].join(process.cwd(), '/src/db/user.txt');
 
 var UserSchema = /*#__PURE__*/function () {
   function UserSchema() {
-    (0, _classCallCheck2.default)(this, UserSchema);
+    (0, _classCallCheck2["default"])(this, UserSchema);
   }
 
-  (0, _createClass2.default)(UserSchema, [{
+  (0, _createClass2["default"])(UserSchema, [{
     key: "create",
     value: function () {
-      var _create = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(_ref) {
+      var _create = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(_ref) {
         var name, phoneNumber, imgurl, dda, data, str;
-        return _regenerator.default.wrap(function _callee$(_context) {
+        return _regenerator["default"].wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
@@ -94,9 +94,9 @@ var UserSchema = /*#__PURE__*/function () {
   }, {
     key: "findAll",
     value: function () {
-      var _findAll = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+      var _findAll = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2() {
         var x, y;
-        return _regenerator.default.wrap(function _callee2$(_context2) {
+        return _regenerator["default"].wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
@@ -127,8 +127,8 @@ var UserSchema = /*#__PURE__*/function () {
   }, {
     key: "findById",
     value: function () {
-      var _findById = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3(_id) {
-        return _regenerator.default.wrap(function _callee3$(_context3) {
+      var _findById = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(_id) {
+        return _regenerator["default"].wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
@@ -163,9 +163,9 @@ var UserSchema = /*#__PURE__*/function () {
   }, {
     key: "signup",
     value: function () {
-      var _signup = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee4(_ref2) {
+      var _signup = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee4(_ref2) {
         var username, name, imgurl, thisUser, data, str;
-        return _regenerator.default.wrap(function _callee4$(_context4) {
+        return _regenerator["default"].wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
               case 0:
@@ -218,16 +218,16 @@ var UserSchema = /*#__PURE__*/function () {
   }, {
     key: "createToken",
     value: function createToken(_id) {
-      return _jsonwebtoken.default.sign({
+      return _jsonwebtoken["default"].sign({
         _id: _id
       }, 'SECRET');
     }
   }, {
     key: "login",
     value: function () {
-      var _login = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee5(_ref3) {
+      var _login = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee5(_ref3) {
         var username, password, thisUser;
-        return _regenerator.default.wrap(function _callee5$(_context5) {
+        return _regenerator["default"].wrap(function _callee5$(_context5) {
           while (1) {
             switch (_context5.prev = _context5.next) {
               case 0:
@@ -273,9 +273,9 @@ var UserSchema = /*#__PURE__*/function () {
   }, {
     key: "findByIdAndUpdate",
     value: function () {
-      var _findByIdAndUpdate = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee6(_id, data) {
+      var _findByIdAndUpdate = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee6(_id, data) {
         var all, p, s;
-        return _regenerator.default.wrap(function _callee6$(_context6) {
+        return _regenerator["default"].wrap(function _callee6$(_context6) {
           while (1) {
             switch (_context6.prev = _context6.next) {
               case 0:
@@ -298,7 +298,7 @@ var UserSchema = /*#__PURE__*/function () {
 
               case 7:
                 Object.entries(data).forEach(function (_ref4) {
-                  var _ref5 = (0, _slicedToArray2.default)(_ref4, 2),
+                  var _ref5 = (0, _slicedToArray2["default"])(_ref4, 2),
                       key = _ref5[0],
                       value = _ref5[1];
 
@@ -334,4 +334,4 @@ var UserSchema = /*#__PURE__*/function () {
 
 var User = new UserSchema();
 var _default = User;
-exports.default = _default;
+exports["default"] = _default;

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from "react"
 import blogyimg from "../Assets/images/blogyimg.png"
 import { useParams, Link } from "react-router-dom";
-import LogOut from '../Component/LogOut';
+import LogOut from '../Assets/svg/LogOut';
 import back from "../Assets/images/back.png"
 
 
